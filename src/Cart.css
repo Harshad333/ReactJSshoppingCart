@@ -1,0 +1,54 @@
+
+.Cart{
+  font-size: 50px;
+  font-family: Fantasy;
+}
+
+.add-minus-quantity{
+    width: 4rem;
+    height: 3rem;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    background-color: transparent;
+  }
+
+  .Clear_cart{
+    font-size: 1.6rem;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 1rem;
+  }
+
+.Clear_cart:hover{
+  background-color: black; 
+  color: white;
+}  
+  
+.Delete button{
+    font-size: 1.6rem;
+    background-color: white;
+    color: black;
+    border: 2px solid red;
+    border-radius: 1rem;
+  }
+
+.Delete button:hover {
+  background-color: red; 
+  color: white;
+}
+
+.Checkout{
+  font-size: 1.6rem;
+    background-color: white;
+    color: black;
+    border: 2px solid blueviolet;
+    border-radius: 1rem;
+}
+
+.Checkout:hover{
+  background-color: blueviolet; 
+  color: white;
+}

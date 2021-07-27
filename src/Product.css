@@ -1,0 +1,33 @@
+.Products{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.Product{
+    border-radius: 2px;
+}
+
+.iconImage{
+  width: 45%;
+  height: 45%;
+}
+
+.pro{
+    font-size: 50px;
+  font-family: Fantasy;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.Add_To_Cart{
+    margin-top: 10px;
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(189, 120, 120);
+    border-radius: 1rem;
+}
+
+.Add_To_Cart:hover{
+    background-color: rgb(189, 120, 120);
+  color: white;
+}

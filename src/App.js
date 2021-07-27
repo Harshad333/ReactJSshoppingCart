@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import React, { useState } from 'react'
 import './App.css';
+import Cart from './Cart';
+import Product from './Product'
 
-function App() {
+
+const App = () => {
+  const [cart, setCart] = useState([])
+  const [page, setPage] = useState('products')
+
+  const navigateTo = (nextPage) => {
+    setPage(nextPage);
+  }
+
+
+  const getCartTotal = () => {
+    return cart.reduce((sum, { quantity }) => sum + quantity, 0);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="Header">
+        <div className="cart-icon">
+          <div className="go_product"> <button className="view_product" onClick={() => navigateTo('products')}>View Product</button>
+            <button className="view_cart" onClick={() => navigateTo('cart')}>Go to  Cart({getCartTotal()})</button></div>
+        </div>
+      </div>
+      {page === 'products' && <Product cart={cart} setCart={setCart} />}
+        {page === 'cart' && <Cart setCart={setCart} cart={cart} />}
+
     </div>
   );
 }
